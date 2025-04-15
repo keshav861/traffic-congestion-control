@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!-- Vehicle Types -->
+    <vType id="car_dark" vClass="passenger" guiShape="passenger" length="5.0" maxSpeed="13.89" accel="2.6" decel="4.5" sigma="0.5" color="0.2,0.2,0.2"/>
+    <vType id="car_light" vClass="passenger" guiShape="passenger" length="5.0" maxSpeed="13.89" accel="2.6" decel="4.5" sigma="0.5" color="0.4,0.4,0.4"/>
+    <vType id="bus" vClass="bus" guiShape="bus" length="12.0" maxSpeed="11.11" accel="1.5" decel="3.5" sigma="0.5" color="1.0,1.0,0.0"/>
+    <vType id="truck" vClass="truck" guiShape="truck" length="10.0" maxSpeed="11.11" accel="1.5" decel="3.5" sigma="0.5" color="0.6,0.3,0.2"/>
+    <vType id="bike" vClass="motorcycle" guiShape="motorcycle" length="1.8" maxSpeed="5.56" accel="1.0" decel="2.0" sigma="0.5" color="0.0,0.5,0.0"/>
+
+    <!-- Define Routes -->
+    <!-- East Approach Routes -->
+    <route id="route_E1_to_E0" edges="-E1 E0"/>
+    <route id="route_E1_to_A0B0" edges="-E1 A0B0"/>
+    <route id="route_E1_to_A0A1" edges="-E1 A0A1"/>
+    
+    <!-- North Approach Routes -->
+    <route id="route_A1A0_to_E1" edges="A1A0 E1"/>
+    <route id="route_A1A0_to_E0" edges="A1A0 E0"/>
+    <route id="route_A1A0_to_A0B0" edges="A1A0 A0B0"/>
+    
+    <!-- West Approach Routes -->
+    <route id="route_B0A0_to_A0A1" edges="B0A0 A0A1"/>
+    <route id="route_B0A0_to_E1" edges="B0A0 E1"/>
+    <route id="route_B0A0_to_E0" edges="B0A0 E0"/>
+    
+    <!-- South Approach Routes -->
+    <route id="route_E0_to_A0B0" edges="-E0 A0B0"/>
+    <route id="route_E0_to_A0A1" edges="-E0 A0A1"/>
+    <route id="route_E0_to_E1" edges="-E0 E1"/>
+
+    <!-- ============== INITIAL VEHICLES AT TIME 0 ============== -->
+    <!-- East Approach Vehicles (Time 0) -->
+    <vehicle id="veh_E1_to_E0_0" type="car_dark" route="route_E1_to_E0" depart="0.0"/>
+    
+    <!-- North Approach Vehicles (Time 0) -->
+    <vehicle id="veh_A1A0_to_E1_0" type="truck" route="route_A1A0_to_E1" depart="0.0"/>
+    <vehicle id="veh_A1A0_to_E1_1" type="bike" route="route_A1A0_to_E1" depart="0.0"/>
+    <vehicle id="veh_A1A0_to_E0_0" type="car_dark" route="route_A1A0_to_E0" depart="0.0"/>
+    <vehicle id="veh_A1A0_to_A0B0_0" type="car_light" route="route_A1A0_to_A0B0" depart="0.0"/>
+    
+    <!-- West Approach Vehicles (Time 0) -->
+    <vehicle id="veh_B0A0_to_A0A1_0" type="bus" route="route_B0A0_to_A0A1" depart="0.0"/>
+    <vehicle id="veh_B0A0_to_E0_0" type="car_light" route="route_B0A0_to_E0" depart="0.0"/>
+    
+    <!-- South Approach Vehicles (Time 0) -->
+    <vehicle id="veh_E0_to_A0B0_0" type="car_dark" route="route_E0_to_A0B0" depart="0.0"/>
+    <vehicle id="veh_E0_to_A0A1_0" type="bike" route="route_E0_to_A0A1" depart="0.0"/>
+    <vehicle id="veh_E0_to_E1_0" type="car_light" route="route_E0_to_E1" depart="0.0"/>
+
+    <!-- ============== TIME 100s ============== -->
+    <!-- East Approach Vehicles (Time 100s) -->
+    <vehicle id="veh_E1_to_E0_100" type="car_dark" route="route_E1_to_E0" depart="100.0"/>
+    <vehicle id="veh_E1_to_A0B0_100" type="truck" route="route_E1_to_A0B0" depart="100.0"/>
+    
+    <!-- North Approach Vehicles (Time 100s) -->
+    <vehicle id="veh_A1A0_to_E1_100" type="car_light" route="route_A1A0_to_E1" depart="100.0"/>
+    <vehicle id="veh_A1A0_to_A0B0_100" type="bike" route="route_A1A0_to_A0B0" depart="100.0"/>
+    
+    <!-- West Approach Vehicles (Time 100s) -->
+    <vehicle id="veh_B0A0_to_A0A1_100" type="car_dark" route="route_B0A0_to_A0A1" depart="100.0"/>
+    <vehicle id="veh_B0A0_to_E0_100" type="bus" route="route_B0A0_to_E0" depart="100.0"/>
+    
+    <!-- South Approach Vehicles (Time 100s) -->
+    <vehicle id="veh_E0_to_A0B0_100" type="car_light" route="route_E0_to_A0B0" depart="100.0"/>
+
+    <!-- ============== TIME 200s ============== -->
+    <!-- East Approach Vehicles (Time 200s) -->
+    <!-- <vehicle id="veh_E1_to_A0A1_200" type="car_light" route="route_E1_to_A0A1" depart="200.0"/>
+    <vehicle id="veh_E1_to_E0_200" type="bus" route="route_E1_to_E0" depart="200.0"/>
+     -->
+    <!-- North Approach Vehicles (Time 200s) -->
+    <vehicle id="veh_A1A0_to_E0_200" type="bike" route="route_A1A0_to_E0" depart="200.0"/>
+    <vehicle id="veh_A1A0_to_E1_200" type="car_dark" route="route_A1A0_to_E1" depart="200.0"/>
+    
+    <!-- West Approach Vehicles (Time 200s) -->
+    <vehicle id="veh_B0A0_to_E1_200" type="car_light" route="route_B0A0_to_E1" depart="200.0"/>
+    <vehicle id="veh_B0A0_to_A0A1_200" type="truck" route="route_B0A0_to_A0A1" depart="200.0"/>
+    
+    <!-- South Approach Vehicles (Time 200s) -->
+    <vehicle id="veh_E0_to_A0A1_200" type="car_dark" route="route_E0_to_A0A1" depart="200.0"/>
+    <vehicle id="veh_E0_to_A0B0_200" type="bus" route="route_E0_to_A0B0" depart="200.0"/>
+    <vehicle id="veh_E0_to_A0B0_200_1" type="bus" route="route_E0_to_A0B0" depart="200.0"/>
+
+    <!-- ============== TIME 300s ============== -->
+    <!-- East Approach Vehicles (Time 300s) -->
+    <vehicle id="veh_E1_to_A0B0_300" type="car_dark" route="route_E1_to_A0B0" depart="300.0"/>
+    
+    <!-- North Approach Vehicles (Time 300s) -->
+    <vehicle id="veh_A1A0_to_A0B0_300" type="car_light" route="route_A1A0_to_A0B0" depart="300.0"/>
+    
+    <!-- West Approach Vehicles (Time 300s) -->
+    <vehicle id="veh_B0A0_to_E0_300" type="truck" route="route_B0A0_to_E0" depart="300.0"/>
+    
+    <!-- South Approach Vehicles (Time 300s) -->
+    <vehicle id="veh_E0_to_E1_300" type="bike" route="route_E0_to_E1" depart="300.0"/>
+
+    <!-- ============== TIME 400s ============== -->
+    <!-- East Approach Vehicles (Time 400s) -->
+    <vehicle id="veh_E1_to_E0_400" type="car_light" route="route_E1_to_E0" depart="400.0"/>
+    <vehicle id="veh_E1_to_A0A1_400" type="truck" route="route_E1_to_A0A1" depart="400.0"/>
+    
+    <!-- North Approach Vehicles (Time 400s) -->
+    <vehicle id="veh_A1A0_to_E1_400" type="bus" route="route_A1A0_to_E1" depart="400.0"/>
+    <vehicle id="veh_A1A0_to_E0_400" type="car_dark" route="route_A1A0_to_E0" depart="400.0"/>
+    
+    <!-- West Approach Vehicles (Time 400s) -->
+    <vehicle id="veh_B0A0_to_A0A1_400" type="bike" route="route_B0A0_to_A0A1" depart="400.0"/>
+    <vehicle id="veh_B0A0_to_E1_400" type="car_light" route="route_B0A0_to_E1" depart="400.0"/>
+    
+    <!-- South Approach Vehicles (Time 400s) -->
+    <vehicle id="veh_E0_to_A0B0_400" type="truck" route="route_E0_to_A0B0" depart="400.0"/>
+    <vehicle id="veh_E0_to_A0B0_400_1" type="bike" route="route_E0_to_A0B0" depart="400.0"/>
+    <vehicle id="veh_E0_to_A0A1_400" type="car_dark" route="route_E0_to_A0A1" depart="400.0"/>
+    <vehicle id="veh_E0_to_A0A1_400_1" type="bus" route="route_E0_to_A0A1" depart="400.0"/>
+
+    <!-- ============== TIME 500s ============== -->
+    <!-- East Approach Vehicles (Time 500s) -->
+    <vehicle id="veh_E1_to_A0B0_500" type="bus" route="route_E1_to_A0B0" depart="500.0"/>
+    <vehicle id="veh_E1_to_E0_500" type="car_dark" route="route_E1_to_E0" depart="500.0"/>
+    <vehicle id="veh_E1_to_A0A1_500" type="car_light" route="route_E1_to_A0A1" depart="500.0"/>
+    <vehicle id="veh_E1_to_A0B0_500_1" type="truck" route="route_E1_to_A0B0" depart="500.0"/>
+    <vehicle id="veh_E1_to_E0_500_1" type="bike" route="route_E1_to_E0" depart="500.0"/>
+    
+    <!-- North Approach Vehicles (Time 500s) -->
+    <vehicle id="veh_A1A0_to_A0B0_500" type="car_light" route="route_A1A0_to_A0B0" depart="500.0"/>
+    
+    <!-- West Approach Vehicles (Time 500s) -->
+    <vehicle id="veh_B0A0_to_E0_500" type="car_dark" route="route_B0A0_to_E0" depart="500.0"/>
+    
+    <!-- South Approach Vehicles (Time 500s) -->
+    <vehicle id="veh_E0_to_E1_500" type="truck" route="route_E0_to_E1" depart="500.0"/>
+
+    <!-- ============== TIME 600s ============== -->
+    <!-- East Approach Vehicles (Time 600s) -->
+    <vehicle id="veh_E1_to_A0B0_600" type="car_dark" route="route_E1_to_A0B0" depart="600.0"/>
+    
+    <!-- North Approach Vehicles (Time 600s) -->
+    <vehicle id="veh_A1A0_to_E1_600" type="car_light" route="route_A1A0_to_E1" depart="600.0"/>
+    <vehicle id="veh_A1A0_to_E0_600" type="bus" route="route_A1A0_to_E0" depart="600.0"/>
+    
+    <!-- West Approach Vehicles (Time 600s) -->
+    <vehicle id="veh_B0A0_to_A0A1_600" type="truck" route="route_B0A0_to_A0A1" depart="600.0"/>
+    <vehicle id="veh_B0A0_to_E1_600" type="car_dark" route="route_B0A0_to_E1" depart="600.0"/>
+    <vehicle id="veh_B0A0_to_E0_600" type="car_light" route="route_B0A0_to_E0" depart="600.0"/>
+    
+    <!-- South Approach Vehicles (Time 600s) -->
+    <vehicle id="veh_E0_to_A0B0_600" type="bike" route="route_E0_to_A0B0" depart="600.0"/>
+    <vehicle id="veh_E0_to_A0A1_600" type="car_dark" route="route_E0_to_A0A1" depart="600.0"/>
+
+    <!-- ============== TIME 640s ============== -->
+    <!-- East Approach Vehicles (Time 640s) -->
+    <vehicle id="veh_E1_to_A0B0_640" type="car_light" route="route_E1_to_A0B0" depart="640.0"/>
+    
+    <!-- West Approach Vehicles (Time 640s) -->
+    <vehicle id="veh_B0A0_to_A0A1_640" type="truck" route="route_B0A0_to_A0A1" depart="640.0"/>
+    <vehicle id="veh_B0A0_to_E1_640" type="car_dark" route="route_B0A0_to_E1" depart="640.0"/>
+    <vehicle id="veh_B0A0_to_E0_640" type="car_light" route="route_B0A0_to_E0" depart="640.0"/>
+    <vehicle id="veh_B0A0_to_A0A1_640_1" type="bus" route="route_B0A0_to_A0A1" depart="640.0"/>
+    <vehicle id="veh_B0A0_to_E1_640_1" type="bike" route="route_B0A0_to_E1" depart="640.0"/>
+
+    <!-- ============== TIME 740s ============== -->
+    <!-- East Approach Vehicles (Time 740s) -->
+    <vehicle id="veh_E1_to_A0B0_740" type="car_dark" route="route_E1_to_A0B0" depart="740.0"/>
+    <vehicle id="veh_E1_to_E0_740" type="car_light" route="route_E1_to_E0" depart="740.0"/>
+    
+    <!-- North Approach Vehicles (Time 740s) -->
+    <vehicle id="veh_A1A0_to_E1_740" type="bus" route="route_A1A0_to_E1" depart="740.0"/>
+    
+    <!-- West Approach Vehicles (Time 740s) -->
+    <vehicle id="veh_B0A0_to_A0A1_740" type="truck" route="route_B0A0_to_A0A1" depart="740.0"/>
+    
+    <!-- South Approach Vehicles (Time 740s) -->
+    <vehicle id="veh_E0_to_A0B0_740" type="bike" route="route_E0_to_A0B0" depart="740.0"/>
+    <vehicle id="veh_E0_to_A0A1_740" type="car_dark" route="route_E0_to_A0A1" depart="740.0"/>
+    <vehicle id="veh_E0_to_E1_740" type="car_light" route="route_E0_to_E1" depart="740.0"/>
+
+    <!-- ============== TIME 840s ============== -->
+    <!-- East Approach Vehicles (Time 840s) -->
+    <vehicle id="veh_E1_to_A0B0_840" type="car_dark" route="route_E1_to_A0B0" depart="840.0"/>
+    <vehicle id="veh_E1_to_E0_840" type="car_light" route="route_E1_to_E0" depart="840.0"/>
+    
+    <!-- North Approach Vehicles (Time 840s) -->
+    <vehicle id="veh_A1A0_to_E1_840" type="bus" route="route_A1A0_to_E1" depart="840.0"/>
+    <vehicle id="veh_A1A0_to_E0_840" type="truck" route="route_A1A0_to_E0" depart="840.0"/>
+    
+    <!-- West Approach Vehicles (Time 840s) -->
+    <vehicle id="veh_B0A0_to_A0A1_840" type="bike" route="route_B0A0_to_A0A1" depart="840.0"/>
+    <vehicle id="veh_B0A0_to_E1_840" type="car_dark" route="route_B0A0_to_E1" depart="840.0"/>
+    
+    <!-- South Approach Vehicles (Time 840s) -->
+    <vehicle id="veh_E0_to_A0B0_840" type="car_light" route="route_E0_to_A0B0" depart="840.0"/>
+    <vehicle id="veh_E0_to_A0A1_840" type="car_dark" route="route_E0_to_A0A1" depart="840.0"/>
+
+    <!-- ============== TIME 940s ============== -->
+    <!-- East Approach Vehicles (Time 940s) -->
+    <vehicle id="veh_E1_to_A0B0_940" type="truck" route="route_E1_to_A0B0" depart="940.0"/>
+    
+    <!-- North Approach Vehicles (Time 940s) -->
+    <vehicle id="veh_A1A0_to_E1_940" type="car_dark" route="route_A1A0_to_E1" depart="940.0"/>
+    <vehicle id="veh_A1A0_to_E0_940" type="car_light" route="route_A1A0_to_E0" depart="940.0"/>
+    <vehicle id="veh_A1A0_to_A0B0_940" type="bus" route="route_A1A0_to_A0B0" depart="940.0"/>
+    
+    <!-- West Approach Vehicles (Time 940s) -->
+    <vehicle id="veh_B0A0_to_A0A1_940" type="bike" route="route_B0A0_to_A0A1" depart="940.0"/>
+    
+    <!-- South Approach Vehicles (Time 940s) -->
+    <vehicle id="veh_E0_to_A0B0_940" type="car_dark" route="route_E0_to_A0B0" depart="940.0"/>
+
+    <!-- ============== TIME 1000s ============== -->
+    <!-- East Approach Vehicles (Time 1000s) -->
+    <vehicle id="veh_E1_to_A0B0_1000" type="car_light" route="route_E1_to_A0B0" depart="1000.0"/>
+    
+    <!-- North Approach Vehicles (Time 1000s) -->
+    <vehicle id="veh_A1A0_to_E1_1000" type="car_dark" route="route_A1A0_to_E1" depart="1000.0"/>
+    <vehicle id="veh_A1A0_to_E0_1000" type="bus" route="route_A1A0_to_E0" depart="1000.0"/>
+    <vehicle id="veh_A1A0_to_A0B0_1000" type="truck" route="route_A1A0_to_A0B0" depart="1000.0"/>
+    <vehicle id="veh_A1A0_to_E1_1000_1" type="bike" route="route_A1A0_to_E1" depart="1000.0"/>
+    
+    <!-- West Approach Vehicles (Time 1000s) -->
+    <vehicle id="veh_B0A0_to_A0A1_1000" type="car_light" route="route_B0A0_to_A0A1" depart="1000.0"/>
+    
+    <!-- South Approach Vehicles (Time 1000s) -->
+    <vehicle id="veh_E0_to_A0B0_1000" type="car_dark" route="route_E0_to_A0B0" depart="1000.0"/>
+</routes>
